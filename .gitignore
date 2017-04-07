@@ -1,0 +1,12 @@
+
+*.pyc
+*.egg-info
+*.tar.gz
+*.db
+
+/env
+/build
+/static
+/dist
+/.cache
+/.env
