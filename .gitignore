@@ -99,3 +99,4 @@ ENV/
 # lint
 *.csv
 *.tar.gz
+*.db
