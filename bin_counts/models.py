@@ -14,19 +14,14 @@ Base = declarative_base()
 Base.query = session.query_property()
 
 
+# TODO: Rename BinCount.
 class Bucket(Base):
 
     __tablename__ = 'bucket'
 
-    __table_args__ = (
-        PrimaryKeyConstraint(
-            'corpus',
-            'year',
-            'token',
-            'pos',
-            'bin',
-        ),
-    )
+    __table_args__ = dict(sqlite_autoincrement=True)
+
+    id = Column(Integer, primary_key=True)
 
     corpus = Column(String, nullable=False)
 
