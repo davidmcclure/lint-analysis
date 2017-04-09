@@ -15,6 +15,6 @@ url = URL(drivername='sqlite', database=db_path)
 
 engine = create_engine(url)
 
-build_session = sessionmaker(bind=engine)
+factory = sessionmaker(bind=engine)
 
-session = scoped_session(build_session())
+session = scoped_session(factory)

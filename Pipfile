@@ -5,5 +5,7 @@ verify_ssl = true
 [packages]
 ipython = "*"
 jupyter = "*"
-SQLAlchemy = "*"
 invoke = "*"
+scandir = "*"
+SQLAlchemy = "*"
+ujson = "*"
