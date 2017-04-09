@@ -1,12 +1,14 @@
 
 
 import ujson
+import numpy as np
 
 from datetime import datetime as dt
 
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, PrimaryKeyConstraint
 from sqlalchemy.schema import Index
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.sql import func
 
 from bin_counts.db import session, engine
 from bin_counts.utils import scan_paths
@@ -75,3 +77,39 @@ class BinCount(Base):
         cls.add_index(cls.year)
         cls.add_index(cls.token)
         cls.add_index(cls.pos)
+
+    @classmethod
+    def token_series(cls, token, corpus=None, year1=None, year2=None):
+        """Get an offset -> count series for a word.
+
+        Args:
+            token (str)
+            corpus (str)
+            year1 (int)
+            year2 (int)
+
+        Returns: OrderedDict
+        """
+        query = (
+            session
+            .query(cls.bin, func.sum(cls.count))
+            .filter(cls.token == token)
+            .group_by(cls.bin)
+            .order_by(cls.bin)
+        )
+
+        if corpus:
+            query = query.filter(cls.corpus == corpus)
+
+        if year1:
+            query = query.filter(cls.year >= year1)
+
+        if year2:
+            query = query.filter(cls.year <= year2)
+
+        series = np.zeros(100)
+
+        for offset, count in query:
+            series[offset] = count
+
+        return series
