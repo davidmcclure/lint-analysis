@@ -70,18 +70,7 @@ class BinCount(Base):
     def add_indexes(cls):
         """Add indexes.
         """
-        # Query perf.
         cls.add_index(cls.corpus)
         cls.add_index(cls.year)
         cls.add_index(cls.token)
         cls.add_index(cls.pos)
-
-        # Ensure unique.
-        cls.add_index(
-            cls.corpus,
-            cls.year,
-            cls.token,
-            cls.pos,
-            cls.bin,
-            unique=True,
-        )
