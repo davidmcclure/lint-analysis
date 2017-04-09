@@ -65,6 +65,7 @@ class BinCount(Base):
 
         # Render the index.
         idx.create(bind=engine)
+        print(col_names)
 
     @classmethod
     def add_indexes(cls):
