@@ -4,6 +4,7 @@ import ujson
 import numpy as np
 
 from datetime import datetime as dt
+from collections import OrderedDict
 
 from sqlalchemy import Column, Integer, String, PrimaryKeyConstraint
 from sqlalchemy.schema import Index
@@ -77,6 +78,25 @@ class BinCount(Base):
         cls.add_index(cls.year)
         cls.add_index(cls.token)
         cls.add_index(cls.pos)
+
+    @classmethod
+    def token_counts(cls, min_count=0):
+        """Get total (un-bucketed) token counts.
+
+        Args:
+            min_count (int)
+
+        Returns: OrderedDict
+        """
+        query = (
+            session
+            .query(cls.token, func.sum(cls.count))
+            .group_by(cls.token)
+            .having(func.sum(cls.count) > min_count)
+            .order_by(func.sum(cls.count).desc())
+        )
+
+        return OrderedDict(query.all())
 
     @classmethod
     def token_series(cls, token, corpus=None, year1=None, year2=None):
