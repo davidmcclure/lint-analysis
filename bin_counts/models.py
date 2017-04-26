@@ -11,8 +11,8 @@ from sqlalchemy.schema import Index
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql import func
 
+from core.utils import scan_paths
 from bin_counts.db import session, engine
-from bin_counts.utils import scan_paths
 
 
 Base = declarative_base()
