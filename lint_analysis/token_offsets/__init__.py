@@ -4,7 +4,7 @@ import attr
 import os
 import ujson
 
-from core.utils import scan_paths
+from lint_analysis.core.utils import scan_paths
 
 
 @attr.s
