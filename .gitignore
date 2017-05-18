@@ -102,3 +102,4 @@ ENV/
 *.tar.gz
 *.db
 *.db-journal
+cache
