@@ -1,0 +1,15 @@
+
+ipython
+jupyter
+invoke
+scandir
+ujson
+numpy
+matplotlib
+scipy
+joblib
+pandas
+attrs
+statsmodels
+SQLAlchemy
+pyemd
