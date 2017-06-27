@@ -16,7 +16,7 @@ cached_token_counts = memory.cache(BinCount.token_counts)
 def build_variance_df(depth=10000):
     """Compute token -> (count, variance)
 
-    Returns: DataFrame
+    Returns: DataFram
     """
     tokens = cached_token_counts(depth)
 
