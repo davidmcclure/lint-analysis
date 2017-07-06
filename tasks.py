@@ -2,8 +2,8 @@
 
 from invoke import task
 
-from bin_counts.db import engine
-from bin_counts.models import Base, BinCount
+from lint_analysis.bin_counts.db import engine
+from lint_analysis.bin_counts.models import Base, BinCount
 
 
 @task
