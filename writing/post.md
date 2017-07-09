@@ -1,3 +1,5 @@
+# Distributions of words across narrative time in 27,266 novels
+
 <a href="https://web.stanford.edu/group/litlab/cgi-bin/wordpress/wp-content/uploads/2017/07/how-often.png"><img src="https://web.stanford.edu/group/litlab/cgi-bin/wordpress/wp-content/uploads/2017/07/how-often.png" alt="" width="613" height="496" class="alignnone size-full wp-image-1771" /></a>
 
 Over the course of the last few months here at the Literary Lab, I've been working on a little project that looks at the distributions of individual words inside of novels, when averaged out across lots and lots of texts. This is incredibly simple, really - the end result is basically just a time-series plot for a word, similar to a historical frequency trend. But, the units are different - instead of historical time, the X-axis is what Matt Jockers calls "narrative time," the space between the beginning and end of a book.
