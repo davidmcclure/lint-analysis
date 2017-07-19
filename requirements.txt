@@ -13,3 +13,4 @@ attrs
 statsmodels
 SQLAlchemy
 pyemd
+boltons
