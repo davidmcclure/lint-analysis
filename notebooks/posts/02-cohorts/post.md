@@ -1,12 +1,6 @@
-I wanted to pick back up quickly with that list of the 500 most "non-uniform" words at the end of the last post about word distributions across narrative time in the American novel corpus. Before, I just put these into a big ordered list, arranged by the center of mass of each word's distribution, which gives a pretty good sense of the conceptual gradient from beginning to end. For example, the 30 most beginning-heavy words:
+# (Hierarchically) clustering words across narrative time
 
-![](images/500-start.png)
-
-And the last 30 words, at the end of the narrative:
-
-![](images/500-end.png)
-
-But, it's easy to see that the center-of-mass metric is papering over some interesting differences. For example, "girls" sits right next to "eighteen," both of which are clearly beginning words, in the sense that they're high at the beginning and low at the end:
+I wanted to pick back up quickly with that list of the 500 most "non-uniform" words at the end of the last post about word distributions across narrative time in the American novel corpus. Before, I just put these into a big ordered list, arranged by the center of mass of each word's distribution, which gives a pretty good sense of the conceptual gradient from beginning to end. For example, the 30 most beginning-heavy words. But, it's easy to see that the center-of-mass metric is papering over some interesting differences. For example, "girls" sits right next to "eighteen," both of which are clearly beginning words, in the sense that they're high at the beginning and low at the end:
 
 ![](images/girls-eighteen.png)
 
@@ -28,7 +22,7 @@ The nice thing about hierarchical clustering is that you don't have to make many
 
 Really this is probably a bit too granular, since there are a number of groups that have similar profiles and seem to hang together at some kind of topical / conceptual level. But, I think it's useful to err in the direction of too granular instead of too coarse, since there are some cases where the lower threshold splits out groups that seem interestingly different (for example, the "family" and "dialogue" words, discussed below).
 
-# Beginnings
+## Beginnings
 
 Here's my less-than-scientific gloss on this, where, in the interest of shortness, I've often merged a hanful of groups back together into higher-order groups. To start, at the beginning - there's a big cohort of words that all have something to do with the description of people and objects - age (sixteen, seventeen, eighteen, younger, older), body size (tall, stout, slender), personal qualities (graceful, educated), physical materials (wooden, leather, cotten), etc. These peak out in the first percentile, fall off sharply in the first ~10%, and then decline more gradually across the middle, with some spiking slightly again at the very end:
 
@@ -96,7 +90,7 @@ And, interestingly, a fairly distinct second food cluster, which rises more grad
 
 So, a kind of anatomy of beginnings starts to come into view. First, descriptions of physical setting, places, things, weather, and (the appearance of) people; then family relations and childhood. And then, once the work of world-building is complete, once the stage and props and characters have been described into existence - it's as if the narrative kicks off in earnest with some kind of social gathering or a meal, a first scene or set piece where the characters (mostly women?) are shown dressed fashionably, sitting around the table, at ease and enjoying themselves, before the complications of the plot ensue - Anna Pávlovna's soiree, at the start of *War and Peace*, the first dinner at the Bertolini in *A Room with a View*? A meal at 10%, a dance at 20% - how many individual novels do this?
 
-# Ends
+## Ends
 
 Meanwhile, at the end - first of all, sort of mirroring the food / amusement cohorts that peak just after the start - a series of clusters that peak just before the end, around 90-95%, all having something to do with violence. The highest peak is murder, generally with guns:
 
@@ -122,7 +116,7 @@ And, Brooks / Barthes / Kermode and friends were right, endings also tend to be 
 
 ![](images/sad-endings.png)
 
-# Middles?
+## Middles?
 
 What about the middle? Middles are relatively sparse, in this set of 1,000 words, though, in part, I think this is a function of how I'm skimming off words to look at, and how the counts were tallied up in the first place. Really just two things pop out, and, in both cases, it's not so much that the clusters are "peaking" in the middle, and  more just that they're misisng at the beginning and end. The most exactly middle-heavy cluster is probably this one, which clearly corresponds to *dialogue* - quotation marks and contractions, and those `"<word>` tokens, which are actually errors, places where the OpenNLP tokenizer is failing to split the quotation mark away from the first word in the sentence.
 
