@@ -68,6 +68,8 @@ This also seems to have something to do with childhood and youth, with "mama," "
 
 Again, "childhood" at the beginning makes sense - narratives map onto lives, are told in chronological order, etc. And I suppose that "childhood" at the end is, basically, the consummation of the marriage plot? "Childhood" in the first percentile is the childhood of the protagonist, and "childhood" in the 99th percentile is the childhood of her children?
 
+## 10%
+
 Next in order, moving away from the start - a series of clusters of words related to entertainment, fashion, social interaction, and, notably, women, all of which rise quickly at the start, reach a relatively broad peak around 10%, and then fall of in a sort of convex arc. First, with the highest peak, around 10-15% - "girls," "amused," "amusement":
 
 ![](images/girls-amusement.png)
@@ -90,7 +92,7 @@ And, interestingly, a fairly distinct second food cluster, which rises more grad
 
 So, a kind of anatomy of beginnings starts to come into view. First, descriptions of physical setting, places, things, weather, and (the appearance of) people; then family relations and childhood. And then, once the work of world-building is complete, once the stage and props and characters have been described into existence - it's as if the narrative kicks off in earnest with some kind of social gathering or a meal, a first scene or set piece where the characters (mostly women?) are shown dressed fashionably, sitting around the table, at ease and enjoying themselves, before the complications of the plot ensue - Anna Pávlovna's soiree, at the start of *War and Peace*, the first dinner at the Bertolini in *A Room with a View*? A meal at 10%, a dance at 20% - how many individual novels do this?
 
-## Ends
+## 90%
 
 Meanwhile, at the end - first of all, sort of mirroring the food / amusement cohorts that peak just after the start - a series of clusters that peak just before the end, around 90-95%, all having something to do with violence. The highest peak is murder, generally with guns:
 
@@ -104,7 +106,11 @@ And I think this is war - "enemy," "attack," "guard," "escape"?
 
 ![](images/war.png)
 
-I guess these peaks are the "climax," basically? Finally, at the very end, words that peak in the 99th percentile - some endings are happy, filled with joy, happiness, tender embraces, kisses, eternal faithfulness:
+I guess these peaks are the "climax," basically?
+
+## Ends
+
+Finally, at the very end, words that peak in the 99th percentile - some endings are happy, filled with joy, happiness, tender embraces, kisses, eternal faithfulness:
 
 ![](images/happy-endings.png)
 
