@@ -1,6 +1,6 @@
 I wanted to pick back up quickly with that list of the 500 most "non-uniform" words at the end of the last post about word distributions across narrative time in the American novel corpus. Before, I just put these into a big ordered list, arranged by the center of mass of each word's distribution, which gives a pretty good sense of the conceptual gradient from beginning to end. For example, the 20 most beginning-heavy words:
 
-![]('./images/500-start.png')
+![](images/500-start.png)
 
 And the last 20 words, at the end of the narrative:
 
