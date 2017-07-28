@@ -1,6 +1,6 @@
 # (Hierarchically) clustering words across narrative time
 
-I wanted to pick back up quickly with that list of the 500 most "non-uniform" words at the end of the last post about word distributions across narrative time in the American novel corpus. Before, I just put these into a big ordered list, arranged by the center of mass of each word's distribution, which gives a pretty good sense of the conceptual gradient from beginning to end. For example, the 30 most beginning-heavy words. But, it's easy to see that the center-of-mass metric is papering over some interesting differences. For example, "girls" sits right next to "eighteen," both of which are clearly beginning words, in the sense that they're high at the beginning and low at the end:
+I wanted to pick back up quickly with that list of the 500 most "non-uniform" words at the end of the last post about word distributions across narrative time in the American novel corpus. Before, I just put these into a big ordered list, arranged by the center of mass of each word's distribution, which gives a pretty good sense of the conceptual gradient from beginning to end. But, it's easy to see that the center-of-mass metric is papering over some interesting differences. For example, "girls" sits right next to "eighteen," both of which are clearly beginning words, in the sense that they're high at the beginning and low at the end:
 
 ![](images/girls-eighteen.png)
 
