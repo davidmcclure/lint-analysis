@@ -99,14 +99,13 @@ class BinCount(Base):
         return OrderedDict(query.all())
 
     @classmethod
-    def token_series(cls, token, corpus=None, year1=None, year2=None):
+    def token_series(cls, token, corpus=None, pos=None):
         """Get an offset -> count series for a word.
 
         Args:
             token (str)
             corpus (str)
-            year1 (int)
-            year2 (int)
+            pos (str)
 
         Returns: OrderedDict
         """
@@ -121,11 +120,8 @@ class BinCount(Base):
         if corpus:
             query = query.filter(cls.corpus == corpus)
 
-        if year1:
-            query = query.filter(cls.year >= year1)
-
-        if year2:
-            query = query.filter(cls.year <= year2)
+        if pos:
+            query = query.filter(cls.pos == pos)
 
         series = np.zeros(100)
 
