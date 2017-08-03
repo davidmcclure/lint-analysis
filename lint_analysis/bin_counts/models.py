@@ -163,3 +163,22 @@ class BinCount(Base):
             series[offset] = count
 
         return series
+
+    @classmethod
+    def token_pos_counts(cls, token):
+        """Get POS -> count for a token.
+
+        Args:
+            token (str)
+
+        Returns: OrderedDict
+        """
+        query = (
+            session
+            .query(cls.pos, func.sum(cls.count))
+            .filter(cls.token == token)
+            .group_by(cls.pos)
+            .order_by(func.sum(cls.count).desc())
+        )
+
+        return OrderedDict(query.all())
