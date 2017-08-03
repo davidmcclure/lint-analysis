@@ -45,7 +45,7 @@
 - [these those]
 - i had no idea about this, but then JD pointed out that "this" and "that" look a lot like the "dialogue" clusters from before, particularly the dialogue / mental states cohort:
 - [dialogue / mental states]
-- and, JD also pointed out that both "this" and "that" are most frequent in the "spoken" sub-corpus of COCA. so,   maybe this is driven by dialogue? interesting and sort of weird, though, that when characters talk about things, they would tend to talk about individual things (this morning, that person), and not multiple things?
+- and, JD also pointed out that both "this" and "that" are most frequent in the "spoken" sub-corpus of COCA. so, maybe this is driven by dialogue? does that mean, then - when characters talk about things, they tend to talk about individual things (this morning, that person), not multiple things?
 - as for "these" and "those" - I'm not sure why plurals would be so high at the beginning, though it seems to match up with other signals. eg, if we compare the overall distributions for singular versus plural nouns:
 - [NN, NNS]
 - the plurals are significantly higher at the start, so I guess it makes sense sense that you'd need more these's and those's. (though, this just begs the question - why are plural nouns higher at the start?) the divergence at the end is also interesting - why does those spike up, and these fall off?
@@ -59,4 +59,4 @@
 
 - anyway,  this is really just the tip of the iceberg - almost all high frequency words have strong trends across the narrative. the 30 most frequent words in English:
 - [30 most frequent]
-- in particular - in the next few days I'll circle back to conjunctions, pronouns, and the different tenses of the verb "to be," all of which are sort of bizarre.
+- in particular - conjunctions, pronouns, and the different tenses of the verb "to be" are all sort of bizarre.
