@@ -13,3 +13,4 @@ memory = Memory(cache_dir)
 
 token_counts = memory.cache(BinCount.token_counts)
 token_series = memory.cache(BinCount.token_series)
+pos_series = memory.cache(BinCount.pos_series)
