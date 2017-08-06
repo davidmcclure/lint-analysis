@@ -63,6 +63,9 @@
 - and, why does "each" skyrocket at 99%, but "every" stays low?
 - [each every]
 
+- and / or
+- 
+
 - anyway,  this is really just the tip of the iceberg - almost all high frequency words have strong trends across the narrative. the 30 most frequent words in English:
 - [30 most frequent]
 - in particular - conjunctions, pronouns, and the different tenses of the verb "to be" are all sort of bizarre.

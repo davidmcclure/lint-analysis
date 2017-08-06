@@ -65,3 +65,67 @@ Even if it's true that "a" is marking the rate of world-building in the narrativ
 "The" is interestingly different:
 
 [the]
+
+Also very high at the start, a fast falloff in the first 10% (much faster than for "a"), comparatively low through the middle, and then a small but still very significant uptick at the end. So, "a" and "the" - flip sides of the same coin, grammatically speaking - seem to different work at a narratological. Both seem to make beginnings and ends, but in different ways. "A" shows something about how they are different - beginnings are building worlds, ends are inhabiting those worlds? Whereas "the" is high at both the beginning and the end, and so, I suppose, is proxying something about how they are similar, a way in which the end is some kind of return to the beginning? But, in what sense?
+
+## Determiners - this, that, these, those
+
+Beyond "a" and "the" - the other determiners are interesting:
+
+[determiners]
+
+Or, just this / that / these / those:
+
+[this that these those]
+
+So, at a narratological level, they basically pair up on the basis of singular / plural, not near / far? "This" and "that" are low at the beginning, peak around 70%, and then fall off at the end:
+
+[this, that]
+
+Whereas "these" and "those" are very high at the start, flat across the middle, and then split at the end, with "those" going up and "these" falling off:
+
+[these, those]
+
+JD pointed out that "this" and "that" look a lot like the dialogue clusters from before, and that, in the Corpus of Contemporary American English at BYU, "this" and "that" are most frequent in the "Spoken" sub-corpus. So, maybe this is driven by dialogue? If so, then - when people talk about things, they tend to talk about singular things - this morning, that man - not multiple things?
+
+As for "these" and "those" - I'm not sure why plurals would be so high at the beginning, but it seems to match up with other signals. For example, if we compare the overall distributions of singular and plural nouns:
+
+[NN, NNS]
+
+The plurals are significantly higher at the start, so I guess it makes sense that there would also need to be more these's and those's. (Which just begs the question, though - why are plural nouns higher at the start?) The divergence at the end is also interesting - why does "those" spike up, and "these" fall off? Again, all of this really needs much more careful attention, but - picking up on the "geography" words from the last post, this kind of fits with the idea that the end is a sort of "zooming out," if we think of the narrative as a kind of camera onto the fictional world? At the end the narrative pans out into a wide shot of the surrounding mountains / fields / valleys, it makes itself *distant* from the action of the plot - the domain of "those," not "these"?
+
+Check out the "how much" determiners - "all," "some," and "no" ("no" as a determiner, specfically, in the sense of "there were no people in the room"):
+
+[all, some, no]
+
+All peaks at the end, the moment of generalization, completeness, closure? I'm less sure what to make of the fac that "some" peaks at 20%, but "no" at 80%:
+
+[some, no]
+
+Meanwhile, to close out the determiners - why does "each" skyrocket at 99%, but "every" stays low:
+
+[each, every]
+
+## Conjunctions
+
+Conjunctions are also fascinating. "And" and "or":
+
+[and, or]
+
+Again, there's a fairly tidy explanation for the split at the end, though I'm still kind of bewildered that this stuff actually shows up at such a low level. "Or" introduces a branch, an indeterminacy - Robert will blow the bridge, or he will die trying; Lucy will marry Cecil, or she will marry George; etc. And so, as the plot moves towards a close, "or" has to fall off as the ending is revealed, as uncertainty is replaced by certainty, as the Jamesian "circle" comes to a close and the plot gets sealed up as a unified whole?
+
+This is going on too long, but really quickly - check out the verbs to be:
+
+[to be]
+
+Which split really cleanly into present tense:
+
+[present]
+
+And past:
+
+[past]
+
+So, I guess - middles and ends are in the present tense, beginnings and climaxes are in the past?
+
+Anyway - more on this to come.
