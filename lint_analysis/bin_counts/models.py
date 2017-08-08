@@ -67,7 +67,11 @@ class BinCount(Base):
         idx = Index(name, *cols, **kwargs)
 
         # Render the index.
-        idx.create(bind=engine)
+        try:
+            idx.create(bind=engine)
+        except Exception as e:
+            print(e)
+
         print(col_names)
 
     @classmethod
@@ -78,6 +82,7 @@ class BinCount(Base):
         cls.add_index(cls.year)
         cls.add_index(cls.token)
         cls.add_index(cls.pos)
+        cls.add_index(cls.token, cls.pos)
 
     @classmethod
     def token_counts(cls, min_count=0):
