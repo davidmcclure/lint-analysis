@@ -36,21 +36,7 @@ Which of these is more "surprising"? If you think of them as density functions, 
 
 "A" is flatter, but since it's so frequent, it represents a kind of massive, tectonic displacement of words, sort of like the gravity of the moon pulling the tide in and out - the water only rises and falls a couple of feet, but in order for that to happen the entire mass of the ocean has to get moved around. The amount of narratological energy needed to produce the "a" trend, from this perspective, seems much larger than for "gun."
 
-To get a sense of how this plays out for different stopwords - if we take the same set of the 1,000 most "uneven" words that went into the hierarchical cluster last week, and then compare this to the 100 most *frequent* words in the corpus - 90
-
-if we take the 100 most-frequent words across the entire corpus, 90 of them show up in the set of the 1,000 most non-uniform words
-
-90 of them overlap - 90 of the 100 most-frequent words also show up in the list of the 1,000 most "uneven" words.
-
-starting with the 1,000 most non-uniform words (roughly the top 10%), here are the 100 most frequent words out of that set, ordered from the most to least non-uniform. Basically, words that are both very frequent and very "uneven" across narrative time:
-
-out of the set of the 1,000 most non-uniform words, here are the 100 most f
-
-if we (1) take the set of 1,000 most non-uniform words - roughly the top 10%, the same set that went into the hierarchical cluster last week - and (2) sort these by the overall frequency of each word in the corpus, and then (3) skim off the 100 most-frequent words, and  - we get a set of words that are both very frequent and very narratologically uneven, the 
-
-To get a sense of how this plays out for different stopwords, here are distributions for words that are both very frequent and very non-uniform - the 100 most-frequent words that show up in the set of the 1,000 most narratologically uneven words (roughly the top 10%). (Again, important to note that the Y-axes are different, which is necessary to prevent a handful of huge trends from swamping out less huge but still very powerful trends.)
-
-To get a sense of how this plays out for different stopwords, here are distributions for words that are both very frequent and very "uneven" across the narrative - if we take the 100 most frequent words in the entire corpus, 90 of them show up the same set of the 1,000 most non-uniform words from last week. Here, this set of 90, sorted from most to least non-uniform, starting with the most narratologically "skewed":
+To get a broader sense of this, we can find words that are both very frequent and also very "uneven" across the narrive. If we take the 100 most-frequent words across the entire corpus, 90 of them show up inside of the list of the 1,000 most non-uniform words from last week (roughly the top 10%). Here, this set of 90, sorted from most to least non-uniform - starting with the most narratologically "skewed". (Again, mea culpa that the Y-axes are different, it makes it way easier to see the smaller-but-still-huge trends in the second half of the list. Everything here is significant at p ≈ 0.)
 
 [90]
 
