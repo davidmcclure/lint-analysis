@@ -10,43 +10,49 @@ The weird thing, though, is that it turns out that these really high-frequency f
 
 The Y-axis here is basically a simple measure of narratological "surprise," the degree to which a word isn't just a flat line when you plot out its frequency across the narrative. The blue line represents the null hypothesis, essentially - the amount of variance we'd expect under the uniform distribution, if everything were just random noise. The interesting thing about this, though, is that that slope of the data is clearly steeper than the slope of this line - words seem to become *more* non-uniform as they become more frequent, even after adjusting for the expected correlation between frequency and variance. By and large, the most frequent words are also the most narratologically "uneven" words.
 
- And, by a pretty large margin - on the left side of the graph, among the words that show up ~10k times, the highest-scoring words are about 2 orders of magnitude above what you'd expect; but this rises to almost 3 on the right side, for the small handful of words that show up 10-100M times.
+Here are 100 highest-scoring words under this metric (same as the coloring in the graph), which contain 42 out of the 100 most-frequent words in the corpus:
 
-Here are 100 highest-scoring words under this metric (same as the coloring in the graph), which contains 42 of the 100 most-frequent words overall:
+[top 100, bolding]
 
-[top 100]
+What to make of this? It's kind of perplexing, in a sense, and not what I expected at the start. I assumed that function words would be basically flat, since I don't really think of them as having any kind of semantic "focus" that would cause them to consistently attach to any particular region across the narrative axis, in the way that things like "death" or "marriage" do. I thought they'd probably be *negative* examples of what I was looking for - words that, by virtue of their frequency, just sort of have to show up everywhere, more or less evenly. (Though I also remembered Matt Jockers' finding from *Macroanalysis* that the word "the" fluctuates across historical time, and a little voice in the back of my head wondered if there might be similar effects across narrative time.)
 
-This list of 100 contains all of the XX most frequent words in the dictionary. And, to get all of the 100 most frequent words, you only have to go down to position XX under this ranking.
-
-What to make of this? It's kind of perplexing, in a sense, and not what I expected at the start. I assumed that function words would be basically flat, since I don't really think of them as having any kind of semantic "focus" that would cause them to consistently attach to any particular region across the narrative axis, in the way that things like "death" or "marriage" do. I thought they'd almost be *negative* examples of what I was looking for - words that, by virtue of their frequency, just sort of have to show up everywhere, more or less evenly. (Though I also remembered Matt Jockers' finding from Macroanalysis that the word "the" fluctuates across historical time, and a little voice in the back of my head wondered if there might be similar effects across narrative time.)
-
-Usually, when something correlates with frequency like this, it feels like a red flag, the worry being that you're somehow just reproducing the fact that frequent words are frequent, infrequent words are infrequent. As a sanity check, I re-ran the exact same feature extraction job on the corpus, but this time, for each text, before adding up the bin counts, I randomly shuffled the words in the text to destroy any kind of narratological ordering. Sure enough, with this, the variances clamp right onto the expected line:
+Usually, when something correlates with frequency like this, it feels like a red flag, the worry being that you're somehow just reproducing the fact that frequent words are frequent, infrequent words are infrequent. As a sanity check, I re-ran the exact same feature extraction job on the corpus, but this time, before adding up the bin counts, I randomly shuffled the words in each text to destroy any kind of narratological ordering. Sure enough, with this, the variances clamp right onto the expected line:
 
 [random variances]
 
-So, I think there really is some meaninful way in which high frequency words are the most non-uniform, the most narratologically *charged*, across the axis of the text? But, I'm not really sure what to think about that, whether my expectations were reasonable. Am I wrong to be surprised by this? Is it somehow tautologically true, is there a statistical / linguistic / narratological pressure that would make it impossible for this not to be the case, in some way?
+So, I think there is actually some meaninful way in which highest frequency words are the most non-uniform across the axis of the text, the most uneven, the most narratologically *charged*? This seemed totally bizarre to me at first, then I convinced myself that it wasn't actually that weird, but now I'm sort of back to thinking it's bizarre. But, I'm not really sure if my expectations are calibrated correctly. Am I wrong to be surprised by this?  Is it somehow tautologically true, is there some kind of inevitable linguistic / narratological / information-theoretic pressure that would make it impossible for this not to be the case, in some way?
 
-I tore my hair out about this for a couple weeks. Part of the reason it seems weird, I think, is that there are other reasonable ways of scoring the words that give very different results. Though, I think this really just shows that the question of what it means for a word to be "non-uniform" or "skewed" is less cut-and-dry than seemed to me at first - and, specifically, that it operates in different ways depending on the overall frequency of the word.
-
-For example, take the word "a" - which is the Nth most frequent word in English and appears XX times in the corpus - and the word "gun," which appears XX times:
+Part of the issue, I think, is that the basic question of what it means for a word to be narratologically "non-uniform" is actually less cut-and-dry than it seemed to me at first. Specifically, I think it intuitively means something different for a word to be "surprising," in this context, at different levels of overall frequency. For example, take the word "a" - which is the Nth most frequent word in English and appears XX times in the corpus - and the word "gun," which appears XX times:
 
 [a, gun histograms]
 
-Which of these is more "surprising"? If you think of them as density functions, then "gun" obviously has the more dramatic trend - a huge spike around the X% marker, the moment of the crime / climax, where it literally doubles in volume relative to the baseline across the first half of the narrative. Indeed, if you literally flatten them out into density functions - throwing out information about the overall frequencies - and then compare them to the expected uniform distribution using pretty much any measure of statistical distance or goodness-of-fit, "gun" will always score as more "non-uniform" by a large margin. Just using the Euclidean distance, same as what I did last week for the hierarchical cluster - "gun" has a distance of XX from the uniform distribution, where as "a" is just YY.
+Which of these is more "surprising"? If you think of them as density functions, then "gun" obviously has the more dramatic trend - a huge spike around the X% marker, the moment of the crime / climax, where it literally doubles in volume relative to the baseline across the first half of the narrative. Indeed, if you literally convert them into density functions - throwing out information about the overall frequencies - and then compare them to the expected uniform distribution using pretty much any measure of statistical distance or goodness-of-fit, "gun" will always score as more "non-uniform" by a large margin. Just using the Euclidean distance, same as I did last week for the hierarchical cluster - "gun" has a distance of XX from the uniform distribution, where as "a" is just YY.
 
 [a, gun, relativized series]
 
-"A," as a density function, is much "flatter." But, when you remember the actual footprint of the word in the corpus - "a" appears a total XX times, which represents about X% of all words in all 27k novels - the total quantity of linguistic "mass" that's getting displaced is sort of fascinating and bizarre. In the first percentile, "a" appears XX times more than you'd expect, under the null hypothesis, and XX fewer times in the last percentile. Here's again, plotted with an error bar around the uniform distribution, which shows the expected variance within two standard deviations - if "a" had no trend across the narrative, 95% of the bin counts would fall within the gray band:
+"A," then, as a density function, is much "flatter." But, when you remember the actual footprint of the word in the corpus - "a" appears a total XX times, which represents about X% of all words in all 27k novels - the total quantity of linguistic "mass" that's getting displaced is sort of fascinating and bizarre. In the first percentile, "a" appears XX times more than you'd expect under the null hypothesis, and XX fewer times than you'd expect in the last percentile. Here it is again, plotted with an error bar around the expected uniform distribution - if "a" had no trend across narrative time, then 95% of the bin counts would fall inside of the gray band, which is barely even visible in the context of the actual curve:
 
 [a]
 
-A is flatter, but since it's so frequent, it represents a kind of massive, tectonic displacement of words, sort of like the gravity of the moon pulling the tide in and out - the water only rises and falls a couple of feet, but in order for that to happen the entire mass of the ocean has to get moved around. The amount of narratological energy needed to produce the "a" trend, from this perspective, seems much larger than for "gun."
+"A" is flatter, but since it's so frequent, it represents a kind of massive, tectonic displacement of words, sort of like the gravity of the moon pulling the tide in and out - the water only rises and falls a couple of feet, but in order for that to happen the entire mass of the ocean has to get moved around. The amount of narratological energy needed to produce the "a" trend, from this perspective, seems much larger than for "gun."
 
-At first I tried to figure out which of these two ways of thinking about it made more sense, but, as Ryan Heuser and Dan Jurafsky each pointed out independently, this is probably sort of a losing game - probably neither is "correct," and it makes more sense to say that there are different flavors of "surprise" at play at different orders-of-magnitude of frequency.
+To get a sense of how this plays out for different stopwords - if we take the same set of the 1,000 most "uneven" words that went into the hierarchical cluster last week, and then compare this to the 100 most *frequent* words in the corpus - 90
 
-To get a broad sense of this - here are the distributions for each of the 50 most frequent tokens in the corpus, ordered by the original observed / expected variance score from above. The Y-axis is clamped here, to give an absolute sense of how they compare.
+if we take the 100 most-frequent words across the entire corpus, 90 of them show up in the set of the 1,000 most non-uniform words
 
-[50 most frequent]
+90 of them overlap - 90 of the 100 most-frequent words also show up in the list of the 1,000 most "uneven" words.
+
+starting with the 1,000 most non-uniform words (roughly the top 10%), here are the 100 most frequent words out of that set, ordered from the most to least non-uniform. Basically, words that are both very frequent and very "uneven" across narrative time:
+
+out of the set of the 1,000 most non-uniform words, here are the 100 most f
+
+if we (1) take the set of 1,000 most non-uniform words - roughly the top 10%, the same set that went into the hierarchical cluster last week - and (2) sort these by the overall frequency of each word in the corpus, and then (3) skim off the 100 most-frequent words, and  - we get a set of words that are both very frequent and very narratologically uneven, the 
+
+To get a sense of how this plays out for different stopwords, here are distributions for words that are both very frequent and very non-uniform - the 100 most-frequent words that show up in the set of the 1,000 most narratologically uneven words (roughly the top 10%). (Again, important to note that the Y-axes are different, which is necessary to prevent a handful of huge trends from swamping out less huge but still very powerful trends.)
+
+To get a sense of how this plays out for different stopwords, here are distributions for words that are both very frequent and very "uneven" across the narrative - if we take the 100 most frequent words in the entire corpus, 90 of them show up the same set of the 1,000 most non-uniform words from last week. Here, this set of 90, sorted from most to least non-uniform, starting with the most narratologically "skewed":
+
+[90]
 
 ## a, an, the
 
