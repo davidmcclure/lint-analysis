@@ -16,15 +16,15 @@ Here are 100 highest-scoring words under this metric (same as the coloring in th
 
 This list of 100 contains the XX most frequent words in the dictionary. And, to get all of the 100 most frequent words, you only have to go down to position XX under this ranking.
 
-What to make of this? It's kind of bizarre, in a sense, and not what I expected at the start. I assumed that function words would be (almost) totally flat, since I don't really think of them as having any kind of semantic "focus" that would cause them to consistently attach to any particular region across the narrative axis, in the way that things like "death" or "marriage" do. I thought they'd probably be *negative* examples of what I was looking for, in a sense - words that, by virtue of their frequency, just sort of have to show up everywhere, more or less evenly. (Though I did also remember Matt Jockers' finding from Macroanalysis that the word "the" fluctuates across historical time, and wondered if there might be similar effects across the narrative.)
+What to make of this? It's kind of perplexing, in a sense, and not what I expected at the start. I assumed that function words would be (almost) totally flat, since I don't really think of them as having any kind of semantic "focus" that would cause them to consistently attach to any particular region across the narrative axis, in the way that things like "death" or "marriage" do. I thought they'd probably be *negative* examples of what I was looking for, in a sense - words that, by virtue of their frequency, just sort of have to show up everywhere, more or less evenly. (Though I did also remember Matt Jockers' finding from Macroanalysis that the word "the" fluctuates across historical time, and wondered if there might be similar effects across the narrative.)
 
-Usually, when something correlates with frequency like this, it feels like a red flag, the worry being that you're somehow just reproducing the fact that frequent words are frequent, infrequent words are infrequent. As a sanity check, I re-ran the exact same feature extraction job on the corpus, but this time, for each text, before adding up the bin counts, I randomly shuffled the words in the text, to destroy any kind of narratological ordering. Sure enough, with this, the variances clamp right onto the expected line:
+Usually, when something correlates with frequency like this, it feels like a red flag, the worry being that you're somehow just reproducing the fact that frequent words are frequent, infrequent words are infrequent. As a sanity check, I re-ran the exact same feature extraction job on the corpus, but this time, for each text, before adding up the bin counts, I randomly shuffled the words in the text to destroy any kind of narratological ordering. Sure enough, with this, the variances clamp right onto the expected line:
 
 [random variances]
 
 So, I think there really is some meaninful way in which high frequency words are the most non-uniform, the most narratologically *charged*, across the axis of the text? But, I'm still not totally sure that my expectations were reasonable. Am I wrong to be surprised by this? Is it somehow tautologically true, is there a statistical / linguistic / narratological pressure that would make it impossible for this not to be the case, in some way?
 
-I tore my hair out about this for a couple weeks. Part of the reason it seems weird, I think, is that there are other reasonable ways of scoring the words that give very different results. Which in turn, I think, really just shows that this question of what it means for a word to be narratologically "non-uniform" or "uneven" is less cut-and-dry than seemed to me at first - and, specifically, that it operates in really different ways depending on the overall frequency of the word.
+I tore my hair out about this for a couple weeks. Part of the reason it seems weird, I think, is that there are other reasonable ways of scoring the words that give very different results. Though, I think this really just shows that the question of what it means for a word to be "non-uniform" or "skewed" is less cut-and-dry than seemed to me at first - and, specifically, that it operates in different ways depending on the overall frequency of the word.
 
 For example, take the word "a" - which is the Nth most frequent word in English and appears XX times in the corpus - and the word "gun," which appears XX times:
 
@@ -34,7 +34,7 @@ Which of these is more "surprising"? If you think of them as density functions, 
 
 [a, gun, relativized series]
 
-"A," as a density function, is much "flatter." But, when you remember the actual footprint of the word in the corpus - "a" appears a total XX times, which represents about X% of all words in all 27k novels - the total quantity of linguistic "mass" that's getting displaced is sort of fascinating and bizarre. In the first percentile, "a" appears XX times more than you'd expect, under the null hypothesis, and XX fewer times in the last percentile. Here's again, plotted with an error bar around the uniform distribution, which shows the expected variance within two standard deviations. If "a" had no trend across the narrative, 95% of the bin counts would fall within the gray band:
+"A," as a density function, is much "flatter." But, when you remember the actual footprint of the word in the corpus - "a" appears a total XX times, which represents about X% of all words in all 27k novels - the total quantity of linguistic "mass" that's getting displaced is sort of fascinating and bizarre. In the first percentile, "a" appears XX times more than you'd expect, under the null hypothesis, and XX fewer times in the last percentile. Here's again, plotted with an error bar around the uniform distribution, which shows the expected variance within two standard deviations - if "a" had no trend across the narrative, 95% of the bin counts would fall within the gray band:
 
 [a]
 
@@ -126,6 +126,6 @@ And past:
 
 [past]
 
-So, I guess - middles and ends are in the present tense, beginnings and climaxes are in the past?
+So - middles and ends are in the present tense, beginnings and climaxes are in the past?
 
-Anyway - more on this to come.
+Anyway, there's sort of an infinity of stuff to look at here (pronouns, prepositions, and high-frequency adjectives are especially interesting), and it's hard to know what to pick out at the start. More on this to come.

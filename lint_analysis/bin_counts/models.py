@@ -99,6 +99,28 @@ class BinCount(Base):
         return OrderedDict(query.all())
 
     @classmethod
+    def token_pos_counts(cls, min_count=0):
+        """Get total (token, pos) counts.
+
+        Args:
+            min_count (int)
+
+        Returns: OrderedDict
+        """
+        query = (
+            session
+            .query(cls.token, cls.pos, func.sum(cls.count))
+            .group_by(cls.token, cls.pos)
+            .having(func.sum(cls.count) > min_count)
+            .order_by(func.sum(cls.count).desc())
+        )
+
+        return OrderedDict([
+            ((token, pos), count)
+            for token, pos, count in query.all()
+        ])
+
+    @classmethod
     def token_series(cls, token, corpus=None, pos=None):
         """Get an offset -> count series for a word.
 
@@ -163,22 +185,3 @@ class BinCount(Base):
             series[offset] = count
 
         return series
-
-    @classmethod
-    def token_pos_counts(cls, token):
-        """Get POS -> count for a token.
-
-        Args:
-            token (str)
-
-        Returns: OrderedDict
-        """
-        query = (
-            session
-            .query(cls.pos, func.sum(cls.count))
-            .filter(cls.token == token)
-            .group_by(cls.pos)
-            .order_by(func.sum(cls.count).desc())
-        )
-
-        return OrderedDict(query.all())
