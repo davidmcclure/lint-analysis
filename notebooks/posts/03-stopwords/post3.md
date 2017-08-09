@@ -1,5 +1,7 @@
 # Distributions of function words across novels
 
+![](images/flat/a-an-the-big.png)
+
 Last week I took a look at some of the "cohorts" that were produced by a hierarchical cluster of the distributions of words across narrative time - groups of words that tend to rise and fall together across the plot, when averaged out across thousands of novels. One side-effect of this kind of exploratory approach, I think, is that there's a tendency to focus on the more semantically "focused" signals that are easy to map back onto the experience of actually reading individual novels. For example, it's not hard to reason about what's going on with cluster 37 (pistol, bullet, gun) or 139 (student, students, school). Which, as Ted and Scott pointed out on Twitter, might tell us more about the presence of different genres in the corpus than about "narrative," in any kind of general sense.
 
 ![](images/flat/guns-school.png)
@@ -108,7 +110,7 @@ Meanwhile, to close out the determiners - "each" skyrockets at 99%, whereas "eve
 
 ![](images/flat/each-every.png)
 
-## Conjunctions
+## And vs. or
 
 Conjunctions are also fascinating:
 
