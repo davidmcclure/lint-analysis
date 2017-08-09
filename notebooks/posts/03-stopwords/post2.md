@@ -1,10 +1,10 @@
 # Distributions of function words across narrative time
 
-Last week I looked at some of the "cohorts" or "topics" that were produced by a hierarchical cluster of the distributions of words across narrative time - groups of words that tend to rise and fall together inside of novels. One side effect of this kind of exploratory approach, I think, is that there's a tendency to focus on the more semantically coherent trends that are easy to map back onto the experience of actually reading novels. For example, it's easy to reason about what's going on with cluster 37 (pistol, bullet, gun) or 139 (student, students, school). Which, as Ted and Scott pointed out on Twitter, might say more about the presence of different genres in the corpus than about "narrative," in any kind of general sense. But, what about something like cluster 10, which includes, among other things, stopwords like "a," "an," "or," "than," "these"?
+Last week I looked at some of the "cohorts" or "topics" that were produced by a hierarchical cluster of the distributions of words across narrative time - groups of words that tend to rise and fall together inside of novels. One side-effect of this kind of exploratory approach, I think, is that there's a tendency to focus on the more semantically coherent trends that are easy to map back onto the experience of actually reading novels. For example, it's easy to reason about what's going on with cluster 37 (pistol, bullet, gun) or 139 (student, students, school). Which, as Ted and Scott pointed out on Twitter, might say more about the presence of different genres in the corpus than about "narrative," in any kind of general sense. But, what about something like cluster 10, which includes, among other things, stopwords like "a," "an," "or," "than," "these"?
 
 [37, 139, 10 ??]
 
-These really high-frequency function words turn out to have *very* strong strong trends across narrative time - in fact, stronger than almost anything else in the entire dictionary. Take a look again at this graph from a couple weeks ago, which plots the variance of each word across narrative time as a function of its frequency:
+Interestingly, it turns out that these really high-frequency function words have *very* strong trends across narrative time - in fact, stronger than almost anything else in the entire dictionary. Take a look again at this graph from a couple weeks ago, which plots the variance of each word across narrative time as a function of its frequency:
 
 [variance ratios]
 
