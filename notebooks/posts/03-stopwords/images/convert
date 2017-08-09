@@ -1,0 +1,10 @@
+#!/bin/sh
+
+convert +append raw/guns.png raw/school.png raw/guns-school.png
+
+mkdir flat
+
+for f in raw/*
+do
+    convert -flatten $f flat/$(basename $f)
+done
