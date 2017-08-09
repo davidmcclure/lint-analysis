@@ -148,7 +148,7 @@ Whereas, possessives are all over the place at the start:
 
 With "its" and "your" kind of playing foils to each other. 
 
-Breaking these out on grammatical "persons" - for the first- and third-person singulars, the possessive is highest at the start, followed by the subject pronoun, then the object. Whereas the endings are kind of scrambled, maybe with some interesting gender patterns - he / him / his all fall off dramatically at the end, where as "her" (as a possessive) and "my" spike up:
+Breaking these out on grammatical "persons" - for the first- and third-person singulars, the possessive is highest at the start, followed by the subject pronoun, then the object. Whereas the endings are more mixed, maybe with some interesting gender patterns - he / him / his all fall off dramatically at the end, where as "her" (as a possessive) and "my" spike up:
 
 ![](images/flat/prp-1st-3rd.png)
 
@@ -172,7 +172,7 @@ This is going on way too long, but quickly - also really cool are the punctuatio
 
 ![](images/flat/punctuation.png)
 
-So - questions and dialogue happen in the middle, and endings are exclamatory:
+Questions and dialogue happen in the middle, and endings are exclamatory:
 
 ![](images/flat/question-exclamation.png)
 
@@ -180,6 +180,6 @@ Periods and commas also fascinate me:
 
 ![](images/flat/period-comma.png)
 
-The period, I assume, is basically a proxy for sentence length, where more periods mean shorter sentences? So - long, descriptive sentences at the start; short, staccato, action-filled sentences at the end? And it makes sense that commas would be (sort of) the inverse of this, since - fewer periods means longer sentences, which means more commas? And, they kiss at the end!
+I assume the period is basically a proxy for sentence length, where more periods mean shorter sentences? Something like - long, descriptive sentences at the start, versus short, staccato, action-filled sentences at the end? And it makes sense that commas would be (sort of) the inverse of this, since - fewer periods means longer sentences, which means more commas? And, they kiss at the end!
 
-Anyway, there's sort of an infinity of stuff to look at here, and it's hard to know where to start. I'm writing code right now to look at all of these in the context of bigrams / trigrams (eg, what's following "the" in different percentiles, what's coming before and after "and"?), which I'll try to look at next.
+Anyway, there's sort of an infinity of stuff to look at here, and it's hard to know where to start. I'm writing code right now to look at all of these in the context of higher-order ngrams (eg, what's following "the" in different percentiles?), which I'll try to look at next.
