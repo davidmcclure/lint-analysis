@@ -38,7 +38,7 @@ Which of these is more "surprising"? If you think of them as density functions, 
 
 To get a broader sense of this, we can find words that are both very frequent and also very "uneven" across the narrive. If we take the 100 most-frequent words across the entire corpus, 90 of them show up inside of the list of the 1,000 most non-uniform words from last week (roughly the top 10%). Here, this set of 90, sorted from most to least non-uniform - starting with the most narratologically "skewed". (Again, important to note that the Y-axes are different, it makes it easier to see the smaller-but-still-huge trends in the second half of the list. Everything here is significant at p ≈ 0.)
 
-[90]
+![](images/flat/multiples.png)
 
 
 
