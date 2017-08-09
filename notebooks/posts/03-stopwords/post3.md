@@ -24,7 +24,7 @@ Indeed, when we use this metric to skim off a set of the most non-uniform words,
 
 What to make of this? It's kind of perplexing, and runs against what I expected at the start. I assumed that the function words would be basically flat, maybe with some very slight fluctuation, since I don't really think of them as having any kind of narratological valence or affinity that would cause them to attach to beginnings / middles / ends in the way that things like "death" and "marriage" do. I thought they'd probably be *negative* examples of what I was looking for, almost - words that have to show up everywhere more or less evenly, almost out of necessity, the connective tissue of the language that's needed everywhere equally. (Though I also remembered Matt Jockers' finding from *Macroanalysis* that the word "the" rises and falls across historical time, and a little voice in my head wondered if there might be similar effects across narrative time.)
 
-Usually, when something correlates with frequency like this, it feels like a red flag, the worry being that you're somehow just reproducing the fact that frequent words are frequent, infrequent words are infrequent. As a sanity check, I re-ran the exact same feature extraction job on the corpus, but this time, before pulling out the percentile-sliced word counts for each text, I randomly shuffled the words to destroy any kind of narratological ordering. Sure enough, with this, the variances clamp right onto the expected line:
+Usually, when something correlates with frequency like this, it feels like a red flag, the worry being that you're somehow just reproducing the fact that frequent words are frequent, infrequent words are infrequent. As a sanity check, and to get a sense of what the null hypothesis would look like, I re-ran the exact same feature extraction job on the corpus, but this time, before pulling out the percentile-sliced word counts for each text, I randomly shuffled the words to destroy any kind of narratological ordering. Sure enough, with this, the variances clamp right onto the expected line:
 
 ![](images/flat/random-variance.png)
 
@@ -34,11 +34,11 @@ Part of the reason I had a hard time with this, I think, is that this question o
 
 ![](images/flat/a-gun-hist.png)
 
-"Gun" appears 174,286 times; "a" appears 44,510,387 times, about 255 times as often. Which of these is more "surprising"? At a kind of visual / intuitive level, "gun" obviously has the more dramatic trend - a huge spike around the 95% marker, the moment of the climax, where it literally doubles in volume relative to the baseline across the first half of the narrative. Indeed, if you convert them into probability density functions - throwing out any information about about the overall frequencies - and then compare them to a uniform distribution using pretty much any goodness-of-fit test or distance metric, "gun" will always score higher by a large margin. Just using the Euclidean distance - "a" has a distance of 0.004 from the uniform distribution, whereas "gun" is 0.02, over 5x higher.
+"Gun" appears 174,286 times; "a" appears 44,510,387 times, about 255 times as often. Which of these is more "surprising"? At a kind of visual / intuitive level, "gun" obviously has the more dramatic trend - a huge spike around the 95% marker, where it literally doubles in volume relative to the baseline across the first half of the narrative. Indeed, if you convert them into probability density functions - throwing out any information about about the overall frequencies - and then compare them to a uniform distribution using pretty much any goodness-of-fit test or distance metric, "gun" will always score higher by a large margin. Just using the Euclidean distance - "a" has a distance of 0.004 from the uniform distribution, whereas "gun" is 0.02, over 5x higher.
 
 ![](images/flat/a-gun-series.png)
 
-But, when you remember the actual footprint of "a" in the corpus - 44 million occurrences, which represents about X% of all words in all 27k novels - the total quantity of linguistic "mass" that's getting displaced is sort of fascinating and bizarre. In the first percentile, "a" appears 72 *thousand* times more than we'd expect under the uniform distribution, and 40 thousand fewer times in the last percentile. (Whereas, "gun" only appears about 1,500 times more than we'd expect at 95%.) Here's "a" again, plotted this time with an error bar around the uniform distribution - if "a" had no trend across the plot, then 95% of the bin counts would fall inside of the gray band, which is just a little sliver in the context of the actual data. Compared to this, the 518,308 occurrences in the first percentile have a zscore of 109, and the 404,673 occurrences in the last percentile have a zscore of -61, both of which are kind of absurdly large. (In fact so large, as Scott Enderle pointed out, that the uniform distribution almost feels like a meaningless / incorrect null hypothesis. Though I'm not really sure what the alternative would be.)
+But, when you remember the actual footprint of "a" in the corpus - 44 million occurrences, which represents about 1.8% of all words in all 27k novels - the total quantity of linguistic "mass" that's getting displaced is sort of fascinating and bizarre. In the first percentile, "a" appears 72 *thousand* times more than we'd expect under the uniform distribution, and 40 thousand fewer times in the last percentile. Here it is again, plotted this time with an error bar around the uniform distribution - if "a" had no trend across the plot, then 95% of the bin counts would fall inside of the gray band, which is dwarfed by the actual data. Compared to this expected standard deviation, the 518,308 occurrences in the first percentile have a zscore of 109, and the 404,673 occurrences in the last percentile have a zscore of -61, both of which are kind of absurdly large. (In fact so large, as Scott Enderle pointed out, that the uniform distribution almost feels like a meaningless / incorrect null hypothesis. Though I'm not really sure what the alternative would be.)
 
 ![](images/flat/a-zscore.png)
 
@@ -48,7 +48,7 @@ Whereas for "gun," the high-water mark at 95% only has a zscore of 37 relative t
 
 "A" is flatter, but since it's so frequent, it represents a kind of massive, tectonic displacement of words, sort of like the gravity of the moon pulling the tide in an out - the water only rises and falls a couple of feet, but in order for that to happen the entire mass of the ocean has to get moved around.  The amount of narratological "energy" needed to produce the "a" trend seems much larger than for "gun," from this perspective, which I think is basically what's getting surfaced in the frequency-variance chart. 
 
-So, "gun" beats "a" in one way, but "a" beats "gun" in other ways. Which of this is more true? I spent some time going around in circles on this, but, as Dan Jurafsky and Ryan Heuser pointed out, there might not be a single right answer? Maybe more accurate just to say that there are different types of "surprise" at play, and that they operate differently at n=10^5 than at n=10^8?
+So, "gun" beats "a" in one way, but "a" beats "gun" in other ways. Which of this is more true? I spent some time going around in circles on this, but, as Dan Jurafsky and Ryan Heuser pointed out, there might not be a single right answer. Maybe more accurate just to say that there are different types of "surprise" at play, and that they operate differently at n=10^5 than at n=10^8?
 
 To get a broader set of how that plays out across lots of  words - out of the 100 most frequent words in the corpus, 90 appear in the list of the 1,000 most uneven words, under the metric from above. Here's this list of 90, sorted from the most uneven to the least uneven, starting with the most narratologically skewed, the least flat:
 
@@ -56,27 +56,27 @@ To get a broader set of how that plays out across lots of  words - out of the 10
 
 ## A vs. the
 
-Again, there's too much here to go through all of it, but quickly - what's up with "a"? High at the very beginning, a fast falloff, then a slower decline across the middle, and a quick falloff at the very end. "An" is almost identical, though with more noise in the sample, since it's less frequent:
+There's too much here to go through all of it, but quickly - what's up with "a"? High at the very beginning, a fast falloff, then a slower decline across the middle, and a quick falloff at the very end. "An" is almost identical, though with more noise in the sample, since it's less frequent:
 
 ![](images/flat/a-an.png)
 
 There's a pretty easy explanation for this, though I'm kind of fascinated by the fact that it seems to show up at the scale of the entire narrative, and not just inside of individual passages - "a" is used when an object is introduced for the first time, when an entity makes its first appearance in some context. For example, we might first say - "a man was walking down the street" - but then after that, once the man has been placed on the narrative stage, we'd switch to the definite article - "*the* man walked into a shop," etc. (Franco pointed out that  Benveniste makes exactly this point in *Problems in General Linguistics*.)
 
-So, this is totally speculative, but - maybe one way to think of this is to say that "a" is a proxy for the *rate at which newness is getting introduced into the text*? Most quickly at the start, as the fictional world is getting introduced for the first time. Then, over the course of the middle, the plot continues to move into new fictional space - new people, new places, new objects - but more slowly than at the beginning. And then least slowly at the very end, where the plot doesn't have space left to introduce new things. "A," in other words, gives a kind of  empirical X-ray of the "speed" of the novel, in one sense of the idea - the degree to which it's moving into new fictional contexts that have to be introduced for the first time, as opposed to standing still inside of contexts that have already been introduced? (Sort of like those old RPGs from the late 90s like Baldur's Gate or Icewind Dale, where by default the entire world of the game is black, and thing only come into view as your character moves around the map, as the spotlight falls onto new terriroty for the first time - the moment of "a"?)
+So, this is totally speculative, but - maybe one way to think of this is to say that "a" is a proxy for the *rate at which newness is getting introduced into the text*? Most quickly at the start, as the fictional world is getting introduced for the first time. Then, over the course of the middle, the plot continues to move into new fictional space - new people, new places, new objects - but more slowly than at the beginning. And then least slowly at the very end, where the plot doesn't have space left to introduce new things. "A," in other words, gives a kind of  empirical X-ray of the "speed" of the novel, in one sense of the idea - the degree to which it's moving into new fictional contexts that have to be introduced for the first time, as opposed to standing still inside of contexts that have already been introduced? (Sort of like those old RPGs from the late 90s like Baldur's Gate or Icewind Dale, where by default the entire world of the game is black, and thing only come into view as your character moves around the map, as the spotlight falls onto new territory for the first time - the moment of "a"?)
 
-Is this the right explanation? I think it seems sensible, but I don't really know. The funny thing, though, is that it's not totally obvious to me how you'd "prove" this, either at a linguistic or a literary register. Usually the next step would be to dip back down into individual texts and start spot-checking passages, but with a word like "a," which will appear literally millions of times in virtually all contexts, this seems like sort of a quagmire. I guess the first thing would be to look at words that follow "a," and see if some kind of pattern falls out? Eg, count up all "a __" bigrams, and then find words that come after "a" most distinctively in the first percentile, as compared to the last percentile?
+Is this the right explanation? I think it seems sensible, but I don't really know. The funny thing, though, is that it's not totally obvious to me how you'd "prove" this, either at a linguistic or a literary register. Usually the next step would be to dip back down into individual texts and start spot-checking passages, but with a word like "a," which will appear literally millions of times in virtually all contexts, this seems like sort of a loosing game. I guess the first thing would be to look at words that follow "a," and see if some kind of pattern falls out? Eg, count up all "a __" bigrams, and then find words that come after "a" most distinctively in the first percentile, as compared to the last percentile?
 
 "The" is interestingly different:
 
 ![](images/flat/a-an-the.png)
 
-Also very high at the start (higher than "a"), a fast falloff in the first 10% (faster than "a"), comparatively low through the middle, and then a smaller but still very significant uptick at the end. So, "a" and "the" - flip sides of the same coin, grammatically - seem to do different work at a narralogical level? Both seem to make beginnings and ends, but in different ways. "A" shows some thing about how they are different - beginnings are building worlds, ends are inhabiting those worlds? Whereas, "the" is high at both the beginning and the end, and so, I guess, is marking something about how they are similar, a way in which the end is some kind of return to the beginning? But, in what sense?
+Also very high at the start, a fast falloff in the first 10% (faster than "a"), comparatively low through the middle, and then a smaller but still very significant uptick at the end. So, "a" and "the" - flip sides of the same coin, grammatically - seem to do different work at a narralogical level? Both seem to mark beginnings and ends, but in different ways. "A" shows some thing about how they are different - beginnings are building worlds, ends are inhabiting those worlds? Whereas, "the" is high at both the beginning and the end, and so, I guess, is marking something about how they are similar, a way in which the end is some kind of return to the beginning? But, in what sense?
 
 I'm not sure about this, especially the ending. Weirdly, if we compare "the" to the combined trend for all nouns in the corpus, the ending doesn't match up:
 
 ![](images/flat/the-nn.png)
 
-So - no idea, really.
+So - no idea, really. Beginnings and ends are concrete, external, physical, *particular* in some sense?
 
 ## Determiners
 
@@ -92,17 +92,17 @@ Whereas "these" and "those" are very high at the start, flat across the middle, 
 
 ![](images/flat/these-those.png)
 
-JD pointed out that "this" and "that" look a lot like the dialogue clusters from last week, with the wide peak across the middle. As for "these" and "those" - I'm not sure why plurals would be so high at the beginning, but again, it seems to generally match up with the trend for nouns, where plurals are much higher at the start:
+JD pointed out that "this" and "that" look a lot like the dialogue clusters from last week, with the wide peak across the middle. As for "these" and "those" - I'm not sure why plurals would be so high at the beginning, but in this case it does seem to generally match up with the trend for nouns, where plurals are much higher at the start:
 
 ![](images/flat/nn-nns.png)
 
-Though, the question then just becomes - why plural nouns at the start. The divergence at the end is also interesting - why does "those" spike up, and "these" fall off? Again, all of this needs much more careful attention, but - picking up on the "geography" words from the last post, which spiked up at the end - this kind of fits with the idea that the end is a kind of "zooming out," if we think of the narrative as a kind of camera onto the fictional world? At the end the narrative pans out into a wide shot of the surrounding mountains / fields / valleys, it makes itself *distant* from the action of the plot - the domain of "those," not "these."
+Though, the question then just becomes - why plural nouns at the start. The divergence at the end is also interesting - why does "those" spike up, and "these" fall off? Again, all of this needs much more careful attention, but - picking up on the "geography" words from the last post, which spiked up at the end - this fits with the idea that the end is a sort of "zooming out," if we think of the narrative as a camera onto the fictional world? At the end, the narrative pans out into a wide shot of the surrounding mountains / fields / valleys, it makes itself *distant* from the action of the plot - the domain of "those," not "these"?
 
-Check out the "how much" determiners - "all," "some," and "no" ("no" specifically as a determiner, in the sense of "there were no people in the room")
+Check out the "how much" determiners - "all," "some," and "no" ("no" specifically as a determiner, in the sense of "there were no people in the room"):
 
 ![](images/flat/all-some-no.png)
 
-All peaks at the end, the moment of generalization, completeness, closure? I'm less sure what to make of the fac that "some" peaks at 20%, but "no" at 80%:
+"All" peaks at the end, the moment of generalization, completeness, closure? I'm less sure what to make of the fact that "some" peaks at 20%, but "no" at 80%:
 
 ![](images/flat/some-no.png)
 
@@ -116,7 +116,7 @@ Conjunctions are also fascinating:
 
 ![](images/flat/and-or.png)
 
-Again, there's a tidy explanation for the split at the end, though I'm still kind of bewildered that this stuff actually shows up at such at low level. "Or" introduces a potential branch in the narrative, a state of indeterminacy - Robert will blow the bridge, or he'll die trying; Lucy will marry Cecil, or she will marry George; etc. And so, as the plot moves towards a close, "or" has to fall off as the ending is revealed, as uncertainty is replaced by certainty, as the plot gets sealed up as a unity and the Jamesian "circle" comes to a close?
+Again, there's a tidy explanation for the split at the end, though I'm still sort of bewildered that this stuff actually shows up so strongly and at such a low level. "Or" introduces a potential branch in the narrative, a state of indeterminacy - Robert will blow the bridge, or he'll die trying; Lucy will marry Cecil, or she will marry George; etc. And so, as the plot moves towards a close, "or" has to fall off as the ending is revealed, as uncertainty is replaced by certainty, as the plot gets sealed up as a unity and the Jamesian "circle" comes to a close?
 
 ## To be
 
@@ -136,11 +136,11 @@ So - the beginning is in the past tense, the middle in the present tense (dialog
 
 ## Pronouns
 
-Pronouns are also really interesting. Subject and object pronouns are low at the start, and then rise gradually across the middle, and then kind of scramble at the end. Though, the subject pronouns seem to sort of plateau around 80%, whereas the object pronouns start to tick up:
+Pronouns are also really interesting. Subject and object pronouns are low at the start, and then rise gradually across the middle, and then kind of scramble at the end. Though, overall, the subject pronouns seem to sort of plateau around 80%, whereas the object pronouns start to curve up a bit:
 
 ![](images/flat/prp-subject-object.png)
 
-The absence at the beginning, I guess, might have overlaps with the story about "a"? Characters first have to be introduced, before they can be substituted by prnouns - "A man named Robert" has to come before "he"?
+The absence at the beginning, I guess, might have overlaps with the theory about "a" as a proxy for "newness"? Before they can be referred to with pronouns, characters first have to be introduced with nouns - "a man named Robert" has to come before "he"?
 
 Whereas, possessives are all over the place at the start:
 
@@ -148,7 +148,7 @@ Whereas, possessives are all over the place at the start:
 
 With "its" and "your" kind of playing foils to each other. 
 
-Breaking these out on grammatical "persons" - for the first- and third-person singulars, the possessive is highest at the start, followed by the subject pronoun, then the object. Whereas the endings are more mixed, maybe with some interesting gender patterns - he / him / his all fall off dramatically at the end, where as "her" (as a possessive) and "my" spike up:
+Breaking all of these by grammatical "persons" - for the first- and third-person singulars, the possessive is always highest at the start, followed by the subject, then the object. But endings are more mixed, maybe with some interesting gender patterns - he / him / his all fall off dramatically at the end, where as "her" (as a possessive) and "my" spike up:
 
 ![](images/flat/prp-1st-3rd.png)
 
@@ -156,11 +156,11 @@ Meanwhile, for the third-person plural - "their," the possessive, is super stron
 
 ![](images/flat/prp-3rd-plural.png)
 
-And "our" rises highest at the end:
+And, with the first-person plurals, "our" rises highest at the end:
 
 ![](images/flat/prp-1st-plural.png)
 
-It's also interesting that, for he / him and she / her, the object gradually overtakes the subject:
+It's also interesting that, for he / him and she / her, the object gradually overtakes the subject. Especially with "he" and "him," both of which are almost exactly linear across the middle, but with "him" rising faster and higher:
 
 ![](images/flat/he-him-she-her.png)
 
@@ -180,6 +180,6 @@ Periods and commas also fascinate me:
 
 ![](images/flat/period-comma.png)
 
-I assume the period is basically a proxy for sentence length, where more periods mean shorter sentences? Something like - long, descriptive sentences at the start, versus short, staccato, action-filled sentences at the end? And it makes sense that commas would be (sort of) the inverse of this, since - fewer periods means longer sentences, which means more commas? And, they kiss at the end!
+The period, I assume, is basically a proxy for sentence length, where more periods mean shorter sentences? So, sentences are longest at the very beginning, and shortest just shy of the very end, around 97%. I guess - long, descriptive sentences at the start, and short, staccato, action-filled sentences at the end? And it makes sense that commas would be (sort of) the inverse of this - fewer periods means longer sentences, which means more commas? And, they kiss at the end!
 
-Anyway, there's sort of an infinity of stuff to look at here, and it's hard to know where to start. I'm writing code right now to look at all of these in the context of higher-order ngrams (eg, what's following "the" in different percentiles?), which I'll try to look at next.
+Anyway, there's sort of an infinity of stuff to look at here, and it's hard to know where to start. I'm writing code right now to look at all of these in the context of higher-order ngrams - eg, what words are following "the" in the 99th percentile? Which I'll try to look at next.
