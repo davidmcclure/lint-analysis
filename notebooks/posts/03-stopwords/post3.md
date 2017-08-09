@@ -164,6 +164,8 @@ It's also interesting that, for he / him and she / her, the object gradually ove
 
 So, as the narrative moves forward - things increasingly *happen to* people, they increasingly become grammatical objects, instead of subjects?
 
+## Punctuation
+
 This is going on way too long, but quickly - also really cool are the punctuation tokens, which, usefully in this context, get broken out by the OpenNLP tokenizer as separate "words":
 
 ![](images/flat/punctuation.png)
