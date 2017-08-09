@@ -1,4 +1,4 @@
-# Distributions of function words across novels
+# The (weird) distributions of function words across novels
 
 ![](images/flat/a-an-the-big.png)
 
