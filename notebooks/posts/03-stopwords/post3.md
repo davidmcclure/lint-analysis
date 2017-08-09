@@ -52,6 +52,8 @@ To get a broader set of how that plays out across lots of  words - out of the 10
 
 ![](images/flat/multiples.png)
 
+## A vs. the
+
 Again, there's too much here to go through all of it, but quickly - what's up with "a"? High at the very beginning, a fast falloff, then a slower decline across the middle, and a quick falloff at the very end. "An" is almost identical, though with more noise in the sample, since it's less frequent:
 
 ![](images/flat/a-an.png)
@@ -72,7 +74,11 @@ I'm not sure about this, especially the ending. Weirdly, if we compare "the" to 
 
 ![](images/flat/the-nn.png)
 
-So - no idea, really. Beyond "a" and "the" - the other determiners are interesting:
+So - no idea, really.
+
+## Determiners
+
+Beyond "a" and "the" - the other determiners are interesting:
 
 ![](images/flat/this-that-these-those.png)
 
@@ -102,11 +108,15 @@ Meanwhile, to close out the determiners - "each" skyrockets at 99%, whereas "eve
 
 ![](images/flat/each-every.png)
 
+## Conjunctions
+
 Conjunctions are also fascinating:
 
 ![](images/flat/and-or.png)
 
 Again, there's a tidy explanation for the split at the end, though I'm still kind of bewildered that this stuff actually shows up at such at low level. "Or" introduces a potential branch in the narrative, a state of indeterminacy - Robert will blow the bridge, or he'll die trying; Lucy will marry Cecil, or she will marry George; etc. And so, as the plot moves towards a close, "or" has to fall off as the ending is revealed, as uncertainty is replaced by certainty, as the plot gets sealed up as a unity and the Jamesian "circle" comes to a close?
+
+## To be
 
 Moving on to verbs - a handful of "to be" verbs show up in the list of 90 above. Here's everything together:
 
@@ -121,6 +131,8 @@ And past:
 ![](images/flat/to-be-past.png)
 
 So - the beginning is in the past tense, the middle in the present tense (dialogue, again?), but then the past tense peaks again around 95% (the climax, in some sense?), and then the present shoots back up at the very end.
+
+## Pronouns
 
 Pronouns are also really interesting. Subject and object pronouns are low at the start, and then rise gradually across the middle, and then kind of scramble at the end. Though, the subject pronouns seem to sort of plateau around 80%, whereas the object pronouns start to tick up:
 
