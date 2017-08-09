@@ -6,7 +6,7 @@ Last week I took a look at some of the "cohorts" that were produced by a hierarc
 
 But, what to make of something like cluster 10? This seems more muddled, and, notably, includes a number of stopwords - "a," "an," "or," "than," "these" - all of which made it into the initial cut of the 1,000 most narratologically "uneven" or "non-uniform" words.
 
-![](images/flat/a-an-??.png)
+![](images/flat/a-an-cluster.png)
 
 Which, it turns out, isn't a fluke. These kinds of function words - any one of which can show up tens or hundreds of millions of times across 27,000 novels, and collectively represent a large slice of the 2.5 billion words in the corpus - tend to have *very* strong trends across narrative time. In fact, stronger than almost anything else in the dictionary. Take a look again at this graph from a couple weeks ago, which plots the the non-uniformity of each word as a function of its frequency:
 
