@@ -18,7 +18,7 @@ The Y-axis is just the variance of the word's frequency across each percentile o
 
 Before, I focused on the fact that almost all of the words fall above this line, which corresponds to the fact that most words have some kind of statistically significant trend across the novel. But, beyond that, it's also clear that the slope of the data is steeper than the slope of the line - *words rise higher above the line as frequency increases*. On the left side of the graph, the highest-scoring words sit about 2 orders of magnitude above the baseline; at the right side, this rises to about 3. Words seem to become *more* narratologically volatile as they become more frequent, even after adjusting for the expected relationship between frequency and variance.
 
-Indeed, when we use this metric to skim off a set of the most non-uniform words, we end up getting a large majority of the most frequent words and a much smaller slice of the less frequent words. If we take the 200 highest-scoring words, for example, we get 60 out of the 100 most frequent words in the corpus:
+Indeed, when we use this metric to skim off a set of the most non-uniform words, we end up getting a large majority of the most frequent words and a much smaller slice of the less frequent words. If we take the 200 highest-scoring words, for example, we get 60 out of the 100 most frequent words in the corpus, here in bold:
 
 > <div>end, <b>you</b>, chapter, <b>a</b>, <b>of</b>, <b>the</b>, <b>i</b>, <b>.</b>, chapter, <b>?</b>, i., ii, years, <b>”</b>, <b>!</b>, <b>said</b>, <b>me</b>, iii, <b>“</b>, <b>him</b>, young, <b>she</b>, 2, 3, <b>he</b>, <b>to</b>, <b>her</b>, its, <b>”</b>, <b>will</b>, i., father, school, <b>what</b>, <b>and</b>, hair, mother, god, age, <b>”</b>, tall, ), death, love, the, <b>that</b>, (, <b>,</b>, year, brown, <b>have</b>, happy, <b>now</b>, life, <b>it</b>, <b>not</b>, <b>we</b>, <b>your</b>, <b>in</b>, <b>"</b>, happiness, <b>an</b>, new, joy, boy, <b>or</b>, 5, <b>if</b>, wedding, vii, dead, 6, again, <b>"</b>, old, family, <b>do</b>, blue, small, <b>which</b>, viii, l, iv, heart, large, <b>did</b>, published, book, gun, miss, girls, arms, do, 9, girl, <b>would</b>, ix, <b>could</b>, <b>his</b>, tell, <b>”</b>, kill, bride, told, <b>was</b>, college, always, black, letter, <b>has</b>, 8, don’t, <b>can</b>, <b>back</b>, tears, know, author, last, forgive, shall, asked, go, <b>be</b>, die, mr., saw, <b>had</b>, broad, handsome, hand, gray, must, <b>then</b>, 7, <b>about</b>, fiction, think, <b>n’t</b>, edition, books, boys, <b>little</b>, <b>my</b>, <b>is</b>, cried, <b>their</b>, us, younger, summer, older, prisoner, love, xii, 1, green, <b>by</b>, “you, stranger, vi, beauty, dying, grave, done, novel, village, readers, xiii, world, youth, 22, children, york, kissed, born, think, know, love, 13, mrs., town, rich, killed, story, 23, 21, still, 12, &amp;, whose, very, wife, <b>from</b>, went, <b>some</b>, nose, 24, v., pain, see, <b>like</b></div>
 
@@ -160,7 +160,7 @@ And, with the first-person plurals, "our" rises highest at the end:
 
 ![](images/flat/prp-1st-plural.png)
 
-It's also interesting that, for he / him and she / her, the object gradually overtakes the subject. Especially with "he" and "him," both of which are almost exactly linear across the middle, but with "him" rising faster and higher:
+It's also interesting that, for "he" / "him" and "she" / "her," the object gradually overtakes the subject. Especially with "he" and "him," both of which are almost exactly linear across the middle, but with "him" rising faster and higher:
 
 ![](images/flat/he-him-she-her.png)
 
@@ -168,7 +168,7 @@ So, as the narrative moves forward - things increasingly *happen to* people, the
 
 ## Punctuation
 
-This is going on way too long, but quickly - also really cool are the punctuation tokens, which, usefully in this context, get broken out by the OpenNLP tokenizer as separate "words":
+This is going on way too long, but quickly - also really cool are the punctuation tokens, which, usefully in this context, get broken out by the OpenNLP tokenizer as separate words:
 
 ![](images/flat/punctuation.png)
 
@@ -180,6 +180,6 @@ Periods and commas also fascinate me:
 
 ![](images/flat/period-comma.png)
 
-The period, I assume, is basically a proxy for sentence length, where more periods mean shorter sentences? So, sentences are longest at the very beginning, and shortest just shy of the very end, around 97%. I guess - long, descriptive sentences at the start, and short, staccato, action-filled sentences at the end? And it makes sense that commas would be (sort of) the inverse of this - fewer periods means longer sentences, which means more commas? And, they kiss at the end!
+The period, I assume, is basically a proxy for sentence length, where more periods mean shorter sentences? So, sentences are longest at the very beginning, and shortest just shy of the end, around 97%. I guess - long, descriptive sentences at the start, and short, staccato, action-filled sentences at the end? And it makes sense that commas would be inversely correlated - fewer periods means longer sentences, which means more commas? (And, they kiss at the end!)
 
 Anyway, there's sort of an infinity of stuff to look at here, and it's hard to know where to start. I'm writing code right now to look at all of these in the context of higher-order ngrams - eg, what words are following "the" in the 99th percentile? And beyond that, I think most interesting - would it be possible to use these kinds of trends in really high-frequency words to train classifiers that could "unshuffle" novels, a predictive model of narrative sequence?
