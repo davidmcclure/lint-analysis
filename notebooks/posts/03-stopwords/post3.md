@@ -4,7 +4,7 @@
 
 Last week I looked at some of the [clusters of words that fluctuate together across narrative time](https://litlab.stanford.edu/hierarchical-cluster-across-narrative-time/) in the Lab's corpus of ~27k American novels. A lot of these are pretty semantically "legible," in the sense that it's not hard to map them back onto the experience of actually reading novels. For example, it's easy to reason about what's going on with cluster 139 (student, students, school) or 37 (pistol, bullet, gun). Which, as [Ted](https://twitter.com/Ted_Underwood/status/892445002978250752) and [Scott](https://twitter.com/scottenderle/status/892466165343293440) pointed out on Twitter, might tell us more about the presence of different genres in the corpus than about "narrative," in any kind of general sense.
 
-![](images/flat/guns-school.png)
+![](images/flat/school-guns.png)
 
 But, what to make of something like cluster 10? This seems more muddled, and, notably, includes a number of stopwords - "a," "an," "or," "than," "these".
 

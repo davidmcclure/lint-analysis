@@ -1,6 +1,6 @@
 #!/bin/sh
 
-convert +append raw/school.png raw/guns.png raw/guns-school.png
+convert +append raw/school.png raw/guns.png raw/school-guns.png
 convert +append raw/prp-subject.png raw/prp-object.png raw/prp-subject-object.png
 convert +append raw/he-him.png raw/she-her.png raw/he-him-she-her.png
 convert +append raw/prp-1st.png raw/prp-3rd-m.png raw/prp-3rd-f.png raw/prp-1st-3rd.png
