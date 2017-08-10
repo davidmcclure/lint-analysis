@@ -146,9 +146,9 @@ Whereas, possessives are all over the place at the start:
 
 ![](images/flat/prp-possessive.png)
 
-With "its" and "your" kind of playing foils to each other. 
+With "its" and "your" kind of playing foils to each other.
 
-Breaking all of these by grammatical "persons" - for the first- and third-person singulars, the possessive is always highest at the start, followed by the subject, then the object. But endings are more mixed, maybe with some interesting gender patterns - he / him / his all fall off dramatically at the end, where as "her" (as a possessive) and "my" spike up:
+Breaking these out by grammatical "persons" - for the first- and third-person singulars, the possessive is always highest at the start, followed by the subject, then the object. But endings are more mixed, maybe with some interesting gender patterns - "he," "him," and "his" all fall off dramatically at the end, whereas "her" (as a possessive) and "my" spike up:
 
 ![](images/flat/prp-1st-3rd.png)
 
