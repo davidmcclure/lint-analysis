@@ -1,6 +1,8 @@
-New @literarylab blog post - The (weird) distributions of function words across novels.
+Blog post over at @literarylab - The (weird) distributions of function words across novels.
 
 A write-up of stuff I've been tweeting about for a couple months - thanks @jurafsky, @scottenderle, @quadrismegistus, and @mljockers for helping me think through some of this!
+
+90 of the 100 most frequent words in the corpus have very uneven trends:
 
 Some of the weirder stuff - I still can't figure out "the," which, at the end, diverges from the overall trend for nouns:
 

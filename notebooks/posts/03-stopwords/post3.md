@@ -56,27 +56,27 @@ To get a broader set of how that plays out across lots of  words - out of the 10
 
 ## A vs. the
 
-There's too much here to go through all of it, but quickly - what's up with "a"? High at the very beginning, a fast falloff, then a slower decline across the middle, and a quick falloff at the very end. "An" is almost identical, though with more noise in the sample, since it's less frequent:
+There's too much here to go through all of it, but quickly - what's up with "a"? There's a remarkable symmetry to it - high at the very beginning, a fast falloff in the first 10%, a slower decline across the middle, and then a nosedive again at the very end. "An" is almost identical, though with more noise in the sample, since it's less frequent:
 
 ![](images/flat/a-an.png)
 
 There's a pretty easy explanation for this, though I'm kind of fascinated by the fact that it seems to show up at the scale of the entire narrative, and not just inside of individual passages - "a" is used when an object is introduced for the first time, when an entity makes its first appearance in some context. For example, we might first say - "a man was walking down the street" - but then after that, once the man has been placed on the narrative stage, we'd switch to the definite article - "*the* man walked into a shop," etc. (Franco pointed out that  Benveniste makes exactly this point in *Problems in General Linguistics*.)
 
-So, this is totally speculative, but - maybe one way to think about this is to say that "a" is a proxy for the *rate at which newness is getting introduced into the text*? Most quickly at the start, as the fictional world is getting introduced for the first time. Then, over the course of the middle, the plot continues to move into new fictional space - new people, new places, new objects - but more slowly than at the beginning. And then slowest at the very end, where the plot doesn't have space left to introduce new things. "A," in other words, gives a kind of  empirical X-ray of the "speed" of the novel, in one sense of the idea - the degree to which it's moving into new fictional contexts that have to be introduced for the first time, as opposed to standing still inside of contexts that have already been introduced? (Sort of like those old RPGs from the late 90s like Baldur's Gate or Icewind Dale, where by default the entire world of the game is black, and thing only come into view as your character moves around the map, as the spotlight falls onto new territory for the first time - the moment of "a"?)
+So, this is totally speculative, but - maybe one way to think about this is to say that "a" is a proxy for the *rate at which newness is getting introduced into the text*? Most quickly at the start, as the fictional world is getting introduced for the first time. Then, over the course of the middle, the plot continues to move into new fictional space - new people, new places, new objects - but more slowly than at the beginning. And then slowest at the very end, where the plot doesn't have any space left to introduce new things. "A," in other words, gives a kind of  empirical X-ray of the "speed" of the novel, in one sense of the idea - the degree to which it's moving into new fictional contexts that have to be introduced for the first time, as opposed to standing still inside of contexts that have already been introduced? (Sort of like those old RPGs from the late 90s like Baldur's Gate or Icewind Dale, where by default the entire world of the game is black, and thing only come into view as your character moves around the map, as the spotlight falls onto new territory for the first time - the moment of "a"?)
 
-Is this the right explanation? I think it seems sensible, but I don't really know. The funny thing, though, is that it's not totally obvious to me how you'd "prove" this, either at a linguistic or a literary register. Usually the next step would be to dip back down into individual texts and start spot-checking passages, but with a word like "a," which will appear literally millions of times in virtually all contexts, this seems like sort of a loosing game. I guess the first thing would be to look at words that follow "a," and see if some kind of pattern falls out? Eg, count up all "a __" bigrams, and then find words that come after "a" most distinctively in the first percentile, as compared to the last percentile?
+Is this the right explanation? I think it seems sensible, but I don't really know. The funny thing, though, is that it's not totally clear to me how you'd "prove" this, either at a linguistic or a literary register. Usually the next step would be to dip back down into individual texts and start spot-checking passages, but with a word like "a," which will appear literally millions of times in virtually all contexts, this seems like sort of a loosing game. I guess the first thing would be to look at words that follow "a," and see if some kind of pattern falls out? Eg, count up all "a __" bigrams, and then find words that come after "a" most distinctively in the first percentile, as compared to the last percentile?
 
 "The" is interestingly different:
 
 ![](images/flat/a-an-the.png)
 
-Also very high at the start, a fast falloff in the first 10% (faster than "a"), comparatively low through the middle, and then a smaller but still very significant uptick at the end. So, "a" and "the" - flip sides of the same coin, grammatically - seem to do different work at a narralogical level? Both seem to mark beginnings and ends, but in different ways. "A" shows some thing about how they are different - beginnings are building worlds, ends are inhabiting those worlds? Whereas, "the" is high at both the beginning and the end, and so, I guess, is marking something about how they are similar, a way in which the end is some kind of return to the beginning? But, in what sense?
+Also very high at the start, a fast falloff in the first 10% (faster than "a"), comparatively low through the middle, and then a gradual rise at the end, starting at around 60%. So, "a" and "the" - flip sides of the same coin, grammatically - seem to do different work at a narralogical level? Both seem to mark beginnings and ends, but in different ways. "A" shows some thing about how they are different - beginnings are building worlds, ends are inhabiting those worlds? Whereas, "the" is high at both the beginning and the end, and so, I guess, is marking something about how they are similar, a way in which the end is some kind of return to the beginning? But, in what sense?
 
 I'm not sure about this, especially the ending. Weirdly, if we compare "the" to the combined trend for all nouns in the corpus, the ending doesn't match up:
 
 ![](images/flat/the-nn.png)
 
-So - no idea, really. Beginnings and ends are concrete, external, physical, *particular* in some sense?
+No idea, really. Again, to really get at this, we'd need to look at context - the *what*? What words are following "the," in different parts of the narrative?
 
 ## Determiners
 
@@ -84,7 +84,7 @@ Beyond "a" and "the" - the other determiners are interesting:
 
 ![](images/flat/this-that-these-those.png)
 
-So, at a narratological level, they basically pair up on the basis of singular / plural, not near / far? "This" and "that" are low at the beginning, peak around 70%, and then fall off at the end:
+So, at a narratological level, they basically pair up on the basis of singular / plural, not near / far. "This" and "that" are low at the beginning, peak around 70%, and then fall off at the end:
 
 ![](images/flat/this-that.png)
 
@@ -96,7 +96,7 @@ JD pointed out that "this" and "that" look a lot like the dialogue clusters from
 
 ![](images/flat/nn-nns.png)
 
-Though, the question then just becomes - why plural nouns at the start. The divergence at the end is also interesting - why does "those" spike up, and "these" fall off? Again, all of this needs much more careful attention, but - picking up on the "geography" words from the last post, which spiked up at the end - this fits with the idea that the end is a sort of "zooming out," if we think of the narrative as a camera onto the fictional world? At the end, the narrative pans out into a wide shot of the surrounding mountains / fields / valleys, it makes itself *distant* from the action of the plot - the domain of "those," not "these"?
+Though, the question then just becomes - why plural nouns at the start? The divergence at the end is also interesting - why does "those" spike up, and "these" fall off? Again, all of this needs much more careful attention, but - picking up on the "geography" words from the last post, which spiked at the end - this fits with the idea that the end is a sort of "zooming out," if we think of the narrative as a camera onto the fictional world? At the end, the narrative pans out into a wide shot of the surrounding mountains / fields / valleys, it makes itself *distant* from the action of the plot - the domain of "those," not "these"?
 
 Check out the "how much" determiners - "all," "some," and "no" ("no" specifically as a determiner, in the sense of "there were no people in the room"):
 
@@ -124,11 +124,11 @@ Moving on to verbs - a handful of "to be" verbs show up in the list of 90 above.
 
 ![](images/flat/to-be.png)
 
-Which splits really cleanly into present tense:
+Which splits really cleanly into the present tense:
 
 ![](images/flat/to-be-present.png)
 
-And past:
+And the past:
 
 ![](images/flat/to-be-past.png)
 
@@ -136,11 +136,11 @@ So - the beginning is in the past tense, the middle in the present tense (dialog
 
 ## Pronouns
 
-Pronouns are also really interesting. Subject and object pronouns are low at the start, and then rise gradually across the middle, and then kind of scramble at the end. Though, overall, the subject pronouns seem to sort of plateau around 80%, whereas the object pronouns start to curve up a bit:
+Pronouns are also really varied. Subject and object pronouns are low at the start, rise gradually across the middle, and then kind of scramble at the end. Though, overall, the subject pronouns seem to plateau around 80%, whereas the object pronouns start to curve up a bit:
 
 ![](images/flat/prp-subject-object.png)
 
-The absence at the beginning, I guess, might have overlaps with the theory about "a" as a proxy for "newness"? Before they can be referred to with pronouns, characters first have to be introduced with nouns - "a man named Robert" has to come before "he"?
+The absence at the beginning, I guess, just corresponds that things first need to be introduced with regular nouns, before they can be referred to with pronouns. Eg, "a man named Robert" has to come before "he"?
 
 Whereas, possessives are all over the place at the start:
 
