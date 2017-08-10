@@ -2,11 +2,11 @@
 
 ![](images/flat/a-an-the-big.png)
 
-Last week I took a look at some of the ["cohorts" that were produced by a hierarchical cluster of the distributions of words across narrative time](https://litlab.stanford.edu/hierarchical-cluster-across-narrative-time/) - groups of words that tend to rise and fall together across the plot, when averaged out across thousands of novels. One side-effect of this kind of exploratory approach, I think, is that there's a tendency to focus on the more semantically "legible" signals that are easy to map back onto the experience of actually reading individual novels. For example, it's not hard to reason about what's going on with cluster 37 (pistol, bullet, gun) or 139 (student, students, school). Which, as [Ted](https://twitter.com/Ted_Underwood/status/892445002978250752) and [Scott](https://twitter.com/scottenderle/status/892466165343293440) pointed out on Twitter, might tell us more about the presence of different genres in the corpus than about "narrative," in any kind of general sense.
+Last week I took a look at some of the [clusters of words that rise an fall together across narrative time](https://litlab.stanford.edu/hierarchical-cluster-across-narrative-time/), when averaged out across thosuands of novels. One side-effect of this kind of exploratory approach, I think, is that there's a tendency to focus on the more semantically "legible" signals that are easy to map back onto the experience of actually reading individual novels. For example, it's not hard to reason about what's going on with cluster 37 (pistol, bullet, gun) or 139 (student, students, school). Which, as [Ted](https://twitter.com/Ted_Underwood/status/892445002978250752) and [Scott](https://twitter.com/scottenderle/status/892466165343293440) pointed out on Twitter, might tell us more about the presence of different genres in the corpus than about "narrative," in any kind of general sense.
 
 ![](images/flat/guns-school.png)
 
-But, what to make of something like cluster 10? This seems more muddled, and, notably, includes a number of stopwords - "a," "an," "or," "than," "these" - all of which made it into the initial cut of the 1,000 most narratologically "uneven" or "non-uniform" words.
+But, what to make of something like cluster 10? This seems more muddled, and, notably, includes a number of stopwords - "a," "an," "or," "than," "these".
 
 ![](images/flat/a-an-cluster.png)
 
@@ -14,9 +14,9 @@ Which, it turns out, isn't a fluke. Function words tend to have *very* strong tr
 
 ![](images/flat/variance.png)
 
-The Y-axis is just the raw variance of the word's frequency across each percentile of the novel, which gives a crude measure of "unevenness," the degree to which a word is rising and falling across the narrative. The black line represents the null hypothesis, basically - the amount of variance that we'd expect under the uniform distribution, if everything were just random noise. By dividing the observed variance by this theoretical baseline, we can get a simple score for the narratological "volatility" of the word, the ratio between the observed and expected variances.
+The Y-axis is just the variance of the word's frequency across each percentile of the novel, which gives a crude measure of the unevenness of the word, the degree to which it's rising and falling across the narrative. The black line represents the null hypothesis, basically - the amount of variance that we'd expect under the uniform distribution, if everything were just random noise. By dividing the observed variance by this theoretical baseline, we can get a simple score for the narratological volatility of the word, in a way that controls for the expected correlation with frequency.
 
-Before, I focused on the fact that almost all of the words fall above this line, which corresponds to the fact that most words are significantly different from the uniform distribution and have some kind of "trend" across the novel. But, that's not all. It's also clear that the slope of the data is higher than the slope of the line, that words rise higher above the line as frequency increases - on the left side of the graph, the highest-scoring words sit about 2 orders of magnitude above the baseline; at the right side, this rises to about 3. Words seem to become *more* uneven as they become more frequent, even after adjusting for the expected correlation between frequency and variance.
+Before, I focused on the fact that almost all of the words fall above this line, which corresponds to the fact that most words have some kind of statistically significant trend across the novel. But, beyond that, it's also clear that the slope of the data is steeper than the slope of the line - *words rise higher above the line as frequency increases*. On the left side of the graph, the highest-scoring words sit about 2 orders of magnitude above the baseline; at the right side, this rises to about 3. Words seem to become *more* narratologically volatile as they become more frequent, even after adjusting for the expected relationship between frequency and variance.
 
 Indeed, when we use this metric to skim off a set of the most non-uniform words, we end up getting a large majority of the most frequent words and a much smaller slice of the less frequent words. If we take the 200 highest-scoring words, for example, we get 60 out of the 100 most frequent words in the corpus:
 
@@ -38,11 +38,11 @@ Part of the reason I had a hard time with this, I think, is that this question o
 
 ![](images/flat/a-gun-series.png)
 
-But, when you remember the actual footprint of "a" in the corpus - 44 million occurrences, which represents about 1.8% of all words in all 27k novels - the total quantity of linguistic "mass" that's getting displaced is sort of incredible. In the first percentile, "a" appears 72 *thousand* times more than we'd expect under the uniform distribution, and 40 thousand fewer times in the last percentile. Here it is again, plotted this time with an error bar around the uniform distribution - if "a" had no trend across the plot, then 95% of the bin counts would fall inside of the gray band, which is dwarfed by the actual data. Compared to this expected standard deviation, the 518,308 occurrences in the first percentile have a zscore of 109, and the 404,673 occurrences in the last percentile have a zscore of -61, both of which are kind of absurdly large. (In fact so large, as Scott Enderle pointed out, that the uniform distribution almost feels like a meaningless / incorrect null hypothesis. Though I'm not really sure what the alternative would be.)
+But, when you remember the actual footprint of "a" in the corpus - 44 million occurrences, which represents about 1.8% of all words in all 27k novels - the total quantity of linguistic "mass" that's getting displaced is sort of incredible. Here it is again, plotted this time with an error bar around the expected value of the uniform distribution - if "a" had no trend across the plot, 95% of the bin counts would fall inside the gray band, which gets dwarfed by the actual data. In the first percentile, "a" appears 72 *thousand* times more than we'd expect under the uniform distribution, and 40 thousand fewer times in the last percentile. Which correspond to zscores of 109 and -61, respectively, which are absurdly large. (In fact so large, as Scott Enderle pointed out, that the uniform distribution almost feels like a meaningless / poorly-chosen null hypothesis. But, I'm not really sure what the alternative would be.)
 
 ![](images/flat/a-zscore.png)
 
-Whereas for "gun," the high-water mark at 95% only has a zscore of 37 relative to the uniform distribution:
+Whereas for "gun," the high-water mark at 95% has a zscore of 37, which of course is still huge:
 
 ![](images/flat/gun-zscore.png)
 
