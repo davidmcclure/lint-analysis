@@ -168,7 +168,7 @@ So, as the narrative moves forward - things increasingly *happen to* people, the
 
 ## Punctuation
 
-This is going on way too long, but quickly - also really cool are the punctuation tokens, which, usefully in this context, get broken out by the OpenNLP tokenizer as separate words:
+This is going on way too long, but quickly - also really zany are the punctuation tokens, which, usefully in this context, get broken out by the OpenNLP tokenizer as separate words:
 
 ![](images/flat/punctuation.png)
 
