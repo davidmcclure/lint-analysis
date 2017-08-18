@@ -168,21 +168,25 @@ class BinCount(Base):
         return sorted([r[0] for r in query.all()])
 
     @classmethod
-    def pos_series(cls, *pos):
+    def pos_series(cls, tag, corpus=None):
         """Get an offset -> count series for a POS tag.
 
         Args:
-            *pos (str)
+            tag (str)
+            corpus (str)
 
         Returns: OrderedDict
         """
         query = (
             session
             .query(cls.bin, func.sum(cls.count))
-            .filter(cls.pos.in_(pos))
+            .filter(cls.pos == tag)
             .group_by(cls.bin)
             .order_by(cls.bin)
         )
+
+        if corpus:
+            query = query.filter(cls.corpus == corpus)
 
         series = np.zeros(100)
 

@@ -14,3 +14,4 @@ statsmodels
 SQLAlchemy
 pyemd
 boltons
+PyYAML
