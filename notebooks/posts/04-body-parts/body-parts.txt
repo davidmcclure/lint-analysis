@@ -1,0 +1,21 @@
+hair
+heart ?
+arms
+back ?
+nose
+hands
+eyes
+arm
+hearts ?
+face
+body
+skin
+chin
+curls ?
+breast
+eye
+blood ?
+lips
+mustache
+eyebrows
+brows
