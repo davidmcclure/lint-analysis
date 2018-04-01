@@ -16,3 +16,5 @@ pyemd
 boltons
 PyYAML
 seaborn
+tqdm
+seaborn
