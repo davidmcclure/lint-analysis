@@ -17,4 +17,6 @@ boltons
 PyYAML
 seaborn
 tqdm
+sklearn
+statsmodels
 seaborn
