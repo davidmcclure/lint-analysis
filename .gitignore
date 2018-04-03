@@ -97,6 +97,7 @@ ENV/
 /site
 
 # lint
+/data
 *.csv
 *.json
 *.tar.gz
