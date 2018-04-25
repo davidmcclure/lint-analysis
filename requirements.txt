@@ -20,3 +20,4 @@ tqdm
 sklearn
 statsmodels
 seaborn
+gensim
