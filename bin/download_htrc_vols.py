@@ -16,8 +16,12 @@ def download(df_path, out_dir):
     """
     df = pd.read_json(df_path)
 
-    for htids in tqdm(chunked(list(df.htid), 1000)):
-        download_file(htids, outdir=out_dir)
+    for htids in tqdm(chunked(list(df.htid), 100)):
+
+        try:
+            download_file(htids, outdir=out_dir)
+        except Exception as e:
+            print(e)
 
 
 if __name__ == '__main__':
