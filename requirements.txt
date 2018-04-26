@@ -21,4 +21,5 @@ sklearn
 statsmodels
 seaborn
 gensim
+htrc-feature-reader
 cached_property
