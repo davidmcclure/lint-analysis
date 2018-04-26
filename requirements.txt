@@ -21,3 +21,4 @@ sklearn
 statsmodels
 seaborn
 gensim
+cached_property
