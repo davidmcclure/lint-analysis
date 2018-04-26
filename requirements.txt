@@ -23,3 +23,4 @@ seaborn
 gensim
 htrc-feature-reader
 cached_property
+click
