@@ -1,6 +1,7 @@
 
 ipython
 jupyter
+jupyterlab
 invoke
 scandir
 ujson
@@ -24,3 +25,6 @@ gensim
 htrc-feature-reader
 cached_property
 click
+umap-learn
+altair
+us
