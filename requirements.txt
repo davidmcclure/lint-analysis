@@ -27,4 +27,4 @@ cached_property
 click
 umap-learn
 altair
-us
+textblob
